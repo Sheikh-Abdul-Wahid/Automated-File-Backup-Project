@@ -4,8 +4,8 @@ import time
 import schedule
 import shutil
 
-source_directory = "C:\\Path\\To\\Source"            # Update the source directory with your desired paths
-destination_directory = "C:\\Path\\To\\Destination"  # Update the destination directory with your desired paths
+source_directory = "C:\\Path\\To\\Source"            # Update the source directory with your desired paths.
+destination_directory = "C:\\Path\\To\\Destination"  # Update the destination directory with your desired paths.
 
 def copy_folder_to_directory(source, destination):
     today = datetime.date.today()
