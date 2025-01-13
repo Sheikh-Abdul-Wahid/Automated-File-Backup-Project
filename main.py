@@ -4,8 +4,8 @@ import time
 import schedule
 import shutil
 
-source_directory = "C:\\Path\\To\\Source"            # Update the source directory with your desired paths.
-destination_directory = "C:\\Path\\To\\Destination"  # Update the destination directory with your desired paths.
+source_directory = "C:\\Path\\To\\Source"            # Update the source directory with your desired paths
+destination_directory = "C:\\Path\\To\\Destination"  # Update the destination directory with your desired paths
 
 def copy_folder_to_directory(source, destination):
     today = datetime.date.today()
@@ -18,15 +18,15 @@ def copy_folder_to_directory(source, destination):
     except FileExistsError:
         print(f"Folder already exists in: {destination}")
 
+schedule.every().day.at("16:42").do(lambda: copy_folder_to_directory(source_directory, destination_directory))
+
 """ 
-Define a separate function like run() and place the function call inside it:
+Instead of a lambda function we can define a separate function like run() and place the function call inside it:
 def run():
         copy_folder_to_directory(source_directory, destination_directory)
 
 schedule.every().day.at("16:42").do(run)
 """
-
-schedule.every().day.at("16:42").do(lambda: copy_folder_to_directory(source_directory, destination_directory))
 
 while True:
     schedule.run_pending()
