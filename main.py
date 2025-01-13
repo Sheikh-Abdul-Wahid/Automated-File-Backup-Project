@@ -23,10 +23,10 @@ Define a separate function like run() and place the function call inside it:
 def run():
         copy_folder_to_directory(source_directory, destination_directory)
 
-schedule.every().day.at("16:36").do(run)
+schedule.every().day.at("16:42").do(run)
 """
 
-schedule.every().day.at("18:21").do(lambda: copy_folder_to_directory(source_directory, destination_directory))
+schedule.every().day.at("16:42").do(lambda: copy_folder_to_directory(source_directory, destination_directory))
 
 while True:
     schedule.run_pending()
