@@ -21,7 +21,7 @@ def copy_folder_to_directory(source, destination):
 schedule.every().day.at("16:42").do(lambda: copy_folder_to_directory(source_directory, destination_directory))
 
 """ 
-Instead of a lambda function we can define a separate function like run() and place the function call inside it as follows:
+Instead of a lambda function, define a run() function to call the desired function inside it.
 def run():
         copy_folder_to_directory(source_directory, destination_directory)
 
